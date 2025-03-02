@@ -1,0 +1,17 @@
+venv/
+__pycache__/
+*.log
+logs/
+debug.log
+.env
+*.env
+config.json
+*.pyc
+*.pyo
+*.pyd
+build/
+dist/
+pip-wheel-metadata/
+pg_data/
+docker-compose.override.yaml
+.tmp

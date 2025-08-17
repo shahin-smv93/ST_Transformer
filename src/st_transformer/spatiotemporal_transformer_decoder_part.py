@@ -16,13 +16,9 @@ import numpy as np
 
 #!pip install performer-pytorch
 
-from .spatiotemporal_transformer_time2vec import Time2Vec
 from .spatiotemporal_transformer_extralayers import (
-    ConvBlock, Flatten, localize, reverse_localize, Windowing, ReverseWindowing, SelfMaskingSeq, CrossMaskingSeq, Normalization
+    localize, reverse_localize, Windowing, ReverseWindowing, SelfMaskingSeq, CrossMaskingSeq, Normalization
 )
-from .spatiotemporal_transformer_embedding import Embedding
-from .spatiotemporal_transformer_attention import PerformerAttention, AttentionClass, create_performer_attention
-
 
 class DecoderLayer(nn.Module):
   def __init__(self, d_model, d_y_target, d_y_context,

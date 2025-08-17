@@ -10,22 +10,10 @@ Original file is located at
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-
-#!pip install einops
-
-#!pip install pytorch-lightning
-
 from einops import rearrange, repeat
 
-import sys
-sys.path.append('/content/drive/MyDrive/Spatiotemporal_Transformer/Scripts')
-
-#!ls /content/drive/MyDrive/Spatiotemporal_Transformer/
-
-from spatiotemporal_transformer_time2vec import Time2Vec
-from spatiotemporal_transformer_extralayers import ConvBlock, Flatten
-from spatiotemporal_transformer_grab_sensor_data import load_data, scaling_data, extract_datapoints
-from spatiotemporal_transformer_simulationdataset import SimulationTimeSeries, SimulationTorchDataset, DataModule
+from .spatiotemporal_transformer_time2vec import Time2Vec
+from .spatiotemporal_transformer_extralayers import ConvBlock, Flatten
 
 class Embedding(nn.Module):
   def __init__(self, d_y, d_x, d_model, time_emb_dim: int,

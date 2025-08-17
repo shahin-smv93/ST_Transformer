@@ -7,22 +7,13 @@ Original file is located at
     https://colab.research.google.com/drive/1qp19jjPYZ6xsCK8uhcYYXHkiX4kivJQP
 """
 
-#!pip install einops
-from einops import rearrange, repeat
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import numpy as np
-import sys
 
-sys.path.append('/content/drive/MyDrive/Spatiotemporal_Transformer/Scripts')
+from .spatiotemporal_transformer_extralayers import Flatten, localize, reverse_localize, Windowing, ReverseWindowing, SelfMaskingSeq, Normalization
 
-#!pip install performer-pytorch
-
-from spatiotemporal_transformer_time2vec import Time2Vec
-from spatiotemporal_transformer_extralayers import ConvBlock, Flatten, localize, reverse_localize, Windowing, ReverseWindowing, SelfMaskingSeq, CrossMaskingSeq, Normalization
-from spatiotemporal_transformer_embedding import Embedding
-from spatiotemporal_transformer_attention import PerformerAttention, AttentionClass, create_performer_attention
 
 class EncoderLayer(nn.Module):
   def __init__(self, d_model, d_y_context, local_attention, global_attention,

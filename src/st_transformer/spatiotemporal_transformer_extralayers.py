@@ -7,8 +7,6 @@ Original file is located at
     https://colab.research.google.com/drive/1kG0-cWoNlREg6KPKY_DJdo1zE-hyuP7V
 """
 
-#!pip install einops
-
 import torch
 import torch.nn as nn
 import torch.nn.functional as F

@@ -7,23 +7,18 @@ Original file is located at
     https://colab.research.google.com/drive/1dpXpdCAJL_9S_V_R_KSajDMh6GHdJdL8
 """
 
-#!pip install einops
 from einops import rearrange, repeat
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import numpy as np
-#!pip install performer-pytorch
 import warnings
 
-import sys
-sys.path.append('/content/drive/MyDrive/Spatiotemporal_Transformer/Scripts')
-
-from spatiotemporal_transformer_embedding import Embedding
-from spatiotemporal_transformer_extralayers import ConvBlock, Normalization, PredRearrange
-from spatiotemporal_transformer_attention import PerformerAttention, AttentionClass, create_performer_attention
-from spatiotemporal_transformer_encoder_part import EncoderLayer, Encoder
-from spatiotemporal_transformer_decoder_part import DecoderLayer, Decoder
+from .spatiotemporal_transformer_embedding import Embedding
+from .spatiotemporal_transformer_extralayers import ConvBlock, Normalization, PredRearrange
+from .spatiotemporal_transformer_attention import PerformerAttention, AttentionClass, create_performer_attention
+from .spatiotemporal_transformer_encoder_part import EncoderLayer, Encoder
+from .spatiotemporal_transformer_decoder_part import DecoderLayer, Decoder
 
 
 class SpatioTemporalPerformer(nn.Module):

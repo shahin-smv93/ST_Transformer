@@ -1,5 +1,7 @@
 # Spatio-Temporal Transformer for Simulation Data Forecasting
 
+> **Note:** The code is fully functional and ready to use. Results based on our CFD data (along with the data) will be added after the related paper is published.
+
 This project implements a modular, research-focused spatio-temporal transformer for time-series forecasting, inspired by [SpaceTimeFormer (Grigsby et al., 2022)](https://arxiv.org/abs/2201.00051) and enhanced with Performer (FAVOR+) efficient attention. The code is designed for simulation data (e.g., CFD), but is flexible for other spatio-temporal forecasting tasks.
 
 ---

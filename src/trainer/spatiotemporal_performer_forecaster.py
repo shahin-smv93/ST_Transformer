@@ -7,7 +7,6 @@ Original file is located at
     https://colab.research.google.com/drive/1eBn9giTw62vMEx3EWObvMkF2Vbdk3e-j
 """
 
-import sys
 import pytorch_lightning as pl
 from typing import Tuple
 import torch
@@ -24,12 +23,11 @@ import math, random
 
 torch.set_float32_matmul_precision('high')
 
-sys.path.append('/content/drive/MyDrive/Spatiotemporal_Transformer/Scripts')
-from spatiotemporalperformer import *
-
-from spatiotemporal_transformer_extralayers import PredRearrange
-
-from einops import rearrange
+from st_transformer.spatiotemporalperformer import *
+from st_transformer.linear_model import LinearModel
+from st_transformer.global_norm import GlobalNorm
+from st_transformer.revin import RevIN
+from st_transformer.moving_avg_series_decomp import SeriesDecomposition
 
 
 # with Huber Loss #

@@ -121,4 +121,14 @@ model = SpatioTemporalPerformer_Forecaster(
 
 ---
 
+## References
+
+- **SpaceTimeFormer:**
+  - Grigsby, A., Xu, J., Wu, Z., & Lipton, Z. C. (2022). [Long-Range Transformers for Dynamic Spatiotemporal Forecasting](https://arxiv.org/abs/2201.00051). arXiv:2201.00051.
+
+- **Performer Attention:**
+  - Choromanski, K., Likhosherstov, V., Dohan, D., Song, X., Gane, A., Sarlos, T., Hawkins, P., Davis, J., Mohiuddin, A., Kaiser, L., Belanger, D., Colwell, L., & Weller, A. (2021). [Rethinking Attention with Performers](https://arxiv.org/abs/2009.14794). arXiv:2009.14794.
+
+---
+
 **For questions or contributions, please open an issue or pull request!**

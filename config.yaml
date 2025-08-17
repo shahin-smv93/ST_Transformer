@@ -1,0 +1,52 @@
+# Configuration for SpatioTemporal Performer Training
+
+dataset_path: "dataset/Dataset.npy"
+x_indices: [4, 8, 15, 20, 27, 38, 51]
+y_indices: [3, 7, 14, 24, 50, 85, 140]
+separate_channels: true
+which_dataset: "data_one"  # "data_one" or "data_two"
+train_val_split_idx: 6084
+
+augmentation:
+  freq_noise_level: 0.05
+  gauss_noise_level: 10
+  gauss_mean: 0
+
+num_training_steps: 30000
+
+model:
+  d_y_context: 49
+  d_y_target: 49
+  d_x: 1
+  d_model: 128
+  d_q_k: 16
+  d_v: 16
+  n_heads: 8
+  n_encoder_layers: 4
+  n_decoder_layers: 4
+  d_ff: 256
+  time_emb_dim: 2
+  activation: relu
+  initial_lr: 1e-4
+  loss: mse
+  l2_regul_factor: 1e-4
+  verbose: true
+  start_len: 0
+  max_seq_len: 84
+  normalization_type: batchnorm
+  data_dropout_embedding: 0.0
+  dropout_ff: 0.1
+  redraw_interval: 500
+  use_seasonal_decomp: true
+  use_revin: true
+  use_global_norm: false
+  global_mean: null
+  global_std: null
+  linear_window: 20
+  linear_shared_weights: true
+  time_embedding: true
+  indicator_embedding: true
+  decay_factor: 0.1
+  warmup_steps: 4000
+  autoregressive_training: false
+  scheduled_sampling_k: 5000.0

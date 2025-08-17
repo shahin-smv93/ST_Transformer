@@ -16,3 +16,6 @@ pg_data/
 docker-compose.override.yaml
 .tmp
 dataset/Dataset.npy
+data/README.md
+st_transformer/README.md
+trainer/README.md
